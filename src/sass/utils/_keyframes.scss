@@ -7,3 +7,25 @@
     opacity: 1;
   }
 }
+@keyframes h1_underline_animation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 35rem;
+  }
+}
+@keyframes h1_bracket_animation {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  57% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

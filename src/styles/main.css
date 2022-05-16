@@ -36,6 +36,28 @@ ul {
     opacity: 1;
   }
 }
+@keyframes h1_underline_animation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 35rem;
+  }
+}
+@keyframes h1_bracket_animation {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  57% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 :root {
   --main-font: "Lato", sans-serif;
   --bg-clr-main: rgb(249, 251, 255);
@@ -52,6 +74,7 @@ header .name-container::after {
   margin-block: 0.5rem 1.5rem;
   background-color: rgba(5, 5, 5, 0.733);
   width: 37.5rem;
+  animation: h1_underline_animation 1s forwards;
 }
 header .name-container h1 {
   font-size: 6rem;
@@ -60,22 +83,22 @@ header .name-container h1 {
   text-transform: uppercase;
   font-family: var(--main-font);
   font-weight: 900;
+  line-height: 1.3;
 }
-header .name-container h1 .h1-span-animation {
+header .name-container h1 .h1-name-animation {
   opacity: 0;
 }
-header .name-container h1 .h1-span-animation:nth-of-type(1) {
-  animation: h1_animation 0.75s 0.25s linear;
+header .name-container h1 .h1-name-animation:nth-of-type(1) {
+  animation: h1_animation 0.75s 0.25s forwards;
   display: inline-block;
-  animation-fill-mode: forwards;
 }
-header .name-container h1 .h1-span-animation:nth-of-type(2) {
-  animation: h1_animation 0.75s linear;
+header .name-container h1 .h1-name-animation:nth-of-type(2) {
+  animation: h1_animation 0.75s forwards;
   display: inline-block;
-  animation-fill-mode: forwards;
 }
-header .name-container h1 span:not(#h1-upper-span, #h1-lower-span, .h1-span-animation) {
-  color: rgba(255, 0, 0, 0.75);
+header .name-container h1 span:not(#h1-upper-span, #h1-lower-span, .h1-name-animation) {
+  opacity: 0;
+  animation: h1_bracket_animation 0.5s 1s forwards;
 }
 header .svg-container svg {
   height: 3.5rem;
