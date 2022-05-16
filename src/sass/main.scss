@@ -19,25 +19,26 @@ header {
 
     h1 {
       font-size: 6rem;
-      color: rgb(79 79 79);
       width: 10ch;
       text-transform: uppercase;
       font-family: var(--main-font);
       font-weight: 900;
       line-height: 1.3;
-      .h1-name-animation {
+      .h1-name {
         opacity: 0;
+        color: rgb(95, 95, 95);
       }
-      .h1-name-animation:nth-of-type(1) {
+      .h1-name:nth-of-type(1) {
         animation: h1_animation 0.75s 0.25s forwards;
         display: inline-block;
       }
-      .h1-name-animation:nth-of-type(2) {
+      .h1-name:nth-of-type(2) {
         animation: h1_animation 0.75s forwards;
         display: inline-block;
       }
-      span:not(#h1-upper-span, #h1-lower-span, .h1-name-animation) {
+      span:not(#h1-upper-span, #h1-lower-span, .h1-name) {
         // color: rgba(255, 0, 0, 0.75);
+        color: rgb(79 79 79);
         opacity: 0;
         animation: h1_bracket_animation 0.5s 1s forwards;
       }
