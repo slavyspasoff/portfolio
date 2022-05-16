@@ -58,6 +58,14 @@ ul {
     opacity: 1;
   }
 }
+@keyframes svg_container_animation {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes svg_after_animation {
   0% {
     opacity: 0;
@@ -67,7 +75,6 @@ ul {
     opacity: 1;
   }
 }
-@keyframes main_container_animation {}
 :root {
   --main-font: "Lato", sans-serif;
   --bg-clr-main: rgb(249, 251, 255);
@@ -114,6 +121,7 @@ header .name-container h1 span:not(#h1-upper-span, #h1-lower-span, .h1-name) {
   animation: h1_bracket_animation 0.5s 1s forwards;
 }
 header .svg-container {
+  opacity: 0;
   width: 4rem;
   cursor: pointer;
   position: relative;
@@ -142,6 +150,9 @@ header .svg-container:hover::after {
   animation: svg_after_animation 0.5s 0.5s forwards;
 }
 
+#github-container {
+  animation: svg_container_animation 0.5s linear forwards;
+}
 #github-container:hover svg {
   transform: rotateY(360deg);
 }
@@ -149,6 +160,9 @@ header .svg-container:hover::after {
   content: "github.com/slavyspasoff";
 }
 
+#email-container {
+  animation: svg_container_animation 0.5s 0.25s linear forwards;
+}
 #email-container:hover svg {
   transform: rotate(360deg);
 }
@@ -156,6 +170,9 @@ header .svg-container:hover::after {
   content: "slavyspasoff@gmail.com";
 }
 
+#linkedin-container {
+  animation: svg_container_animation 0.5s 0.25s linear forwards;
+}
 #linkedin-container:hover svg {
   transform: rotateX(-360deg);
 }

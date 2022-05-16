@@ -29,6 +29,14 @@
     opacity: 1;
   }
 }
+@keyframes svg_container_animation {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes svg_after_animation {
   0% {
     opacity: 0;
@@ -37,6 +45,4 @@
   100% {
     opacity: 1;
   }
-}
-@keyframes main_container_animation {
 }

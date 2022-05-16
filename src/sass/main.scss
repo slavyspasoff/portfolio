@@ -45,6 +45,7 @@ header {
   }
 
   .svg-container {
+    opacity: 0;
     width: 4rem;
     cursor: pointer;
     position: relative;
@@ -75,6 +76,7 @@ header {
 }
 
 #github-container {
+  animation: svg_container_animation 0.5s linear forwards;
   &:hover svg {
     transform: rotateY(360deg);
   }
@@ -83,6 +85,7 @@ header {
   }
 }
 #email-container {
+  animation: svg_container_animation 0.5s 0.25s linear forwards;
   &:hover svg {
     transform: rotate(360deg);
   }
@@ -91,6 +94,7 @@ header {
   }
 }
 #linkedin-container {
+  animation: svg_container_animation 0.5s 0.25s linear forwards;
   &:hover svg {
     transform: rotateX(-360deg);
   }
