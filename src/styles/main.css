@@ -70,6 +70,8 @@ ul {
 :root {
   --main-font: "Lato", sans-serif;
   --bg-clr-main: rgb(249, 251, 255);
+  --bracket-clr: rgba(255, 0, 0, 0.75);
+  --svg-clr: rgb(129 129 129);
 }
 
 header .name-container {
@@ -81,7 +83,7 @@ header .name-container::after {
   display: block;
   height: 2px;
   margin-block: 0.5rem 1.5rem;
-  background-color: rgba(5, 5, 5, 0.733);
+  background-color: rgba(5, 5, 5, 0.75);
   width: 37.5rem;
   animation: h1_underline_animation 1s forwards;
 }
@@ -106,27 +108,32 @@ header .name-container h1 .h1-name:nth-of-type(2) {
   display: inline-block;
 }
 header .name-container h1 span:not(#h1-upper-span, #h1-lower-span, .h1-name) {
-  color: rgb(79, 79, 79);
+  color: var(--bracket-clr);
   opacity: 0;
   animation: h1_bracket_animation 0.5s 1s forwards;
 }
 header .svg-container {
+  width: 4rem;
   cursor: pointer;
   position: relative;
-  padding: 1rem;
+  margin: 1.5rem 1rem;
 }
 header .svg-container svg {
   height: 3.25rem;
   width: 3.25rem;
-  fill: rgb(129, 129, 129);
+  fill: var(--svg-clr);
   transition: transform 0.5s linear;
+}
+header .svg-container:hover {
+  width: 35rem;
 }
 header .svg-container::after {
   opacity: 0;
 }
 header .svg-container:hover::after {
   position: absolute;
-  top: 1rem;
+  color: var(--svg-clr);
+  top: 0;
   left: 5rem;
   font-size: 2rem;
   line-height: 2.25rem;
@@ -149,10 +156,27 @@ header .svg-container:hover::after {
 }
 
 #linkedin-container:hover svg {
-  transform: rotateY(360deg);
+  transform: rotateX(-360deg);
 }
 #linkedin-container:hover::after {
   content: "linkedin/stillnoaccout";
+}
+
+main {
+  width: min(180ch, 100%);
+  margin: 5rem 5rem 0 auto;
+  padding: 2rem;
+}
+main article {
+  color: rgb(63, 63, 63);
+}
+main article h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+main p {
+  font-size: 1.5rem;
+  line-height: 1.3;
 }
 
 /*# sourceMappingURL=main.css.map */
