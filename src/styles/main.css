@@ -67,6 +67,7 @@ ul {
     opacity: 1;
   }
 }
+@keyframes main_container_animation {}
 :root {
   --main-font: "Lato", sans-serif;
   --bg-clr-main: rgb(249, 251, 255);
@@ -171,10 +172,14 @@ main article {
   color: rgb(63, 63, 63);
 }
 main article h2 {
+  opacity: 0;
+  animation: h1_animation 1s 1.75s forwards;
   font-size: 3rem;
   margin-bottom: 1rem;
 }
 main p {
+  opacity: 0;
+  animation: h1_animation 0.75s 2s forwards;
   font-size: 1.5rem;
   line-height: 1.3;
 }
