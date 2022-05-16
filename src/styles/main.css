@@ -76,7 +76,7 @@ ul {
   }
 }
 :root {
-  --main-font: "Lato", sans-serif;
+  --main-font: 'Lato', sans-serif;
   --bg-clr-main: rgb(249, 251, 255);
   --bracket-clr: rgba(255, 0, 0, 0.75);
   --svg-clr: rgb(129 129 129);
@@ -87,7 +87,7 @@ header .name-container {
   display: block;
 }
 header .name-container::after {
-  content: "";
+  content: '';
   display: block;
   height: 2px;
   margin-block: 0.5rem 1.5rem;
@@ -157,7 +157,7 @@ header .svg-container:hover::after {
   transform: rotateY(360deg);
 }
 #github-container:hover::after {
-  content: "github.com/slavyspasoff";
+  content: 'github.com/slavyspasoff';
 }
 
 #email-container {
@@ -167,7 +167,7 @@ header .svg-container:hover::after {
   transform: rotate(360deg);
 }
 #email-container:hover::after {
-  content: "slavyspasoff@gmail.com";
+  content: 'slavyspasoff@gmail.com';
 }
 
 #linkedin-container {
@@ -177,7 +177,7 @@ header .svg-container:hover::after {
   transform: rotateX(-360deg);
 }
 #linkedin-container:hover::after {
-  content: "linkedin/stillnoaccout";
+  content: 'linkedin/stillnoaccout';
 }
 
 main {
@@ -190,7 +190,7 @@ main article {
 }
 main article h2 {
   opacity: 0;
-  animation: h1_animation 1s 1.75s forwards;
+  animation: h1_animation 1.25s 1.5s forwards;
   font-size: 3rem;
   margin-bottom: 1rem;
 }
