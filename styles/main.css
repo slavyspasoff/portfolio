@@ -1,0 +1,204 @@
+:root {
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 100vw;
+  min-height: 100vh;
+  background-color: var(--bg-clr-main);
+  padding: 2rem;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+@keyframes h1_animation {
+  0% {
+    opacity: 0;
+    transform: translateY(25%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes h1_underline_animation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 35rem;
+  }
+}
+@keyframes h1_bracket_animation {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  57% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes svg_container_animation {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes svg_after_animation {
+  0% {
+    opacity: 0;
+    transform: translateX(-15%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+:root {
+  --main-font: 'Lato', sans-serif;
+  --bg-clr-main: rgb(249, 251, 255);
+  --bracket-clr: rgba(255, 0, 0, 0.75);
+  --svg-clr: rgb(129 129 129);
+}
+
+header .name-container {
+  padding-inline: 0 10rem;
+  display: block;
+}
+header .name-container::after {
+  content: '';
+  display: block;
+  height: 2px;
+  margin-block: 0.5rem 1.5rem;
+  background-color: rgba(5, 5, 5, 0.75);
+  width: 37.5rem;
+  animation: h1_underline_animation 1s forwards;
+}
+header .name-container h1 {
+  font-size: 6rem;
+  width: 10ch;
+  text-transform: uppercase;
+  font-family: var(--main-font);
+  font-weight: 900;
+  line-height: 1.3;
+}
+header .name-container h1 .h1-name {
+  opacity: 0;
+  color: rgb(95, 95, 95);
+}
+header .name-container h1 .h1-name:nth-of-type(1) {
+  animation: h1_animation 0.75s 0.25s forwards;
+  display: inline-block;
+}
+header .name-container h1 .h1-name:nth-of-type(2) {
+  animation: h1_animation 0.75s forwards;
+  display: inline-block;
+}
+header .name-container h1 span:not(#h1-upper-span, #h1-lower-span, .h1-name) {
+  color: var(--bracket-clr);
+  opacity: 0;
+  animation: h1_bracket_animation 0.5s 1s forwards;
+}
+header .svg-container {
+  opacity: 0;
+  width: 4rem;
+  cursor: pointer;
+  position: relative;
+  margin: 1.5rem 1rem;
+}
+header .svg-container svg {
+  height: 3.25rem;
+  width: 3.25rem;
+  fill: var(--svg-clr);
+  transition: transform 0.5s linear;
+}
+header .svg-container:hover {
+  width: 35rem;
+}
+header .svg-container::after {
+  opacity: 0;
+}
+header .svg-container:hover::after {
+  position: absolute;
+  color: var(--svg-clr);
+  top: 0;
+  left: 5rem;
+  font-size: 2rem;
+  line-height: 2.25rem;
+  padding: 0.5rem;
+  animation: svg_after_animation 0.5s 0.5s forwards;
+}
+
+#github-container {
+  animation: svg_container_animation 0.5s linear forwards;
+}
+#github-container:hover svg {
+  transform: rotateY(360deg);
+}
+#github-container:hover::after {
+  content: 'github.com/slavyspasoff';
+}
+
+#email-container {
+  animation: svg_container_animation 0.5s 0.25s linear forwards;
+}
+#email-container:hover svg {
+  transform: rotate(360deg);
+}
+#email-container:hover::after {
+  content: 'slavyspasoff@gmail.com';
+}
+
+#linkedin-container {
+  animation: svg_container_animation 0.5s 0.25s linear forwards;
+}
+#linkedin-container:hover svg {
+  transform: rotateX(-360deg);
+}
+#linkedin-container:hover::after {
+  content: 'linkedin/stillnoaccout';
+}
+
+main {
+  width: min(180ch, 100%);
+  margin: 5rem 5rem 0 auto;
+  padding: 2rem;
+}
+main article {
+  color: rgb(63, 63, 63);
+}
+main article h2 {
+  opacity: 0;
+  animation: h1_animation 1.25s 1.5s forwards;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+main p {
+  opacity: 0;
+  animation: h1_animation 0.75s 2s forwards;
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+/*# sourceMappingURL=main.css.map */
